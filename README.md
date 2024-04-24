@@ -5,7 +5,7 @@ This document outlines the architecture of a serverless file conversion service 
 
 ## Architecture Components
 
-![File Conversion Service Architecture](file conversion (1).png)
+![File Conversion Service Architecture](file conversion1.png)
 
 ### Users
 End-users interact with the system via a user interface, presumably a web application, that is not shown in the diagram.
