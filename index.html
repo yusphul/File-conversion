@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload to S3</title>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+    <script>
+        AWS.config.update({
+            region: 'us-east-1', // Your region
+            credentials: new AWS.CognitoIdentityCredentials({IdentityPoolId: 'YOUR_IDENTITY_POOL_ID'})
+        });
+
+        var s3 = new AWS.S3({
+            apiVersion: '2006-03-01',
+            params: {Bucket: 'upload_file_bucket'}
+        });
+
+        function uploadFile() {
+            var files = document.getElementById('fileInput').files;
+            if (!files.length) {
+                return alert('Please choose a file to upload first.');
+            }
+            var file = files[0];
+            var key = file.name;
+
+            s3.upload({
+                Key: key,
+                Body: file,
+                ACL: 'public-read'
+            }, function(err, data) {
+                if (err) {
+                    return alert('There was an error uploading your file: ', err.message);
+                }
+                alert('Successfully uploaded file
