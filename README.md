@@ -1,4 +1,6 @@
-# File Conversion Service Architecture
+# File Conversion Service Architecture 
+
+## A capstone presentation for MSIS at Minot State Univerty
 
 ## Overview
 This document outlines the architecture of a serverless file conversion service designed to automatically convert documents to different formats upon upload. The service utilizes various AWS services to handle file uploads, conversions, and notifications.
