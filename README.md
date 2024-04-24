@@ -1,5 +1,5 @@
 # File Conversion Service Architecture: 
-![Minot Logo](minotlogo.jpeg) A capstone presentation for MSIS at Minot State University 
+![Minot Logo](minotlogo.jpg) A capstone presentation for MSIS at Minot State University 
 
 ## Overview
 This document outlines the architecture of a serverless file conversion service designed to automatically convert documents to different formats upon upload. The service utilizes various AWS services to handle file uploads, conversions, and notifications.
